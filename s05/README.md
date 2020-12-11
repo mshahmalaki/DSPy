@@ -22,7 +22,7 @@
 10- ستون New Subscription را از شیت Subscription حذف کنید. 
 
 11- ستون زیر را به دیتافریم Company اضافه کنید:
-<table style="width: 100%">
+<table style="width: 100%" dir="ltr">
     <tr>
         <th>Company Type</th>
     </tr>
