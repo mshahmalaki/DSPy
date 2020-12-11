@@ -22,7 +22,6 @@
 10- ستون New Subscription را از شیت Subscription حذف کنید. 
 
 11- ستون زیر را به دیتافریم Company اضافه کنید:
-<pre dir="ltr">
 <table style="width: 100%">
     <tr>
         <th>Company Type</th>
@@ -37,7 +36,6 @@
         <td>Large</td>
     </tr>
 </table>
-</pre>
 
 12- دیتافریم تمیز شده شیت Table Customer را در یک فایل اکسل ذخیره کنید.(اختیاری)
 </div>
