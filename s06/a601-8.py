@@ -46,3 +46,5 @@ ped_count_05 = pbc[(pbc['Pedestrians'] <= np.percentile(pbc['Pedestrians'], q=75
 print('75% of pedestrian observations:', ped_count_05, 'people')
 
 print('---------------Answer of question 07---------------')
+print('Standard deviation of pedestrians:', '{:.2f}'.format(ped_std_04))
+print('Range of observation:', np.ptp(pbc['Pedestrians']))
