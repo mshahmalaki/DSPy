@@ -26,8 +26,6 @@ print('---------------Answer of question 04---------------')
 ped_avg_03 = pbc['Pedestrians'].mean()
 ped_median_03 = pbc['Pedestrians'].median()
 ped_mode_03 = pbc['Pedestrians'].mode()[2]
-print(ped_avg_03, ped_median_03)
-print(ped_mode_03)
 sns.kdeplot(pbc['Pedestrians'])
 plt.axvline(ped_avg_03, color='y')
 plt.axvline(ped_median_03, color='b')
