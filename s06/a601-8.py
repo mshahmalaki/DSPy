@@ -1,7 +1,7 @@
+import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
-
 
 csv = pd.read_csv(r'./pedestrian-and-bicyclist-counts.csv')
 pbc = pd.DataFrame(csv)
@@ -21,3 +21,13 @@ print(pbc03.mean())
 print('---------------Answer of question 04---------------')
 sns.kdeplot(pbc['Pedestrians'])
 plt.show()
+print('---------------Answer of question 05---------------')
+ped_avg_04 = pbc['Pedestrians'].mean()
+ped_std_04 = pbc['Pedestrians'].std()
+min_range = ped_avg_04 - (3 * ped_std_04)
+max_range = ped_avg_04 + (3 * ped_std_04)
+if min_range >= 0:
+    ped_count_04 = pbc[(pbc['Pedestrians'] >= min_range) & (pbc['Pedestrians'] <= max_range)]['Pedestrians'].count()
+else:
+    ped_count_04 = pbc[(pbc['Pedestrians'] >= 0) & (pbc['Pedestrians'] <= max_range)]['Pedestrians'].count()
+print('99.7% of pedestrian observations', ped_count_04)
