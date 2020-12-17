@@ -48,3 +48,11 @@ print('75% of pedestrian observations:', ped_count_05, 'people')
 print('---------------Answer of question 07---------------')
 print('Standard deviation of pedestrians:', '{:.2f}'.format(ped_std_04))
 print('Range of observation:', np.ptp(pbc['Pedestrians']))
+
+print('---------------Answer of question 08---------------')
+cyclists_skew = pbc['Cyclists'].skew()
+cyclists_kurt = pbc['Cyclists'].kurtosis()
+print('Skewness of cyclists distribution', cyclists_skew)
+print('Kurtosis of cyclists distribution', cyclists_kurt)
+if (abs(cyclists_skew) <= float('2')) & (abs(cyclists_kurt) <= float('2')):
+    print('The cyclists distribution is normal')
